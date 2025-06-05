@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY4355CJP7"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NY4355CJP7');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Náutico Charigue - Medios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="background-nautica"></div>
+    <nav class="navbar-paginas">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+      
+          <li class="dropdown">
+            <a href="#" onclick="return false;">Medios ▾</a>
+            <ul class="dropdown-menu">
+
+              <li><a href="medios-programas.html">Todos a Bordo</a></li>
+              <li><a href="medios-nautica.html">Revista Náutica</a></li>
+            </ul>
+          </li>
+          <li><a href="charlas.html">Charlas con Navegantes</a></li>  
+          <li><a href="metereologia.html">Metereología</a></li>
+          <li><a href="autoridades.html">Autoridades</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      
+        <div class="logo">
+          <img src="LOGO NAUTICO CHARIGUE-white.png" alt="Logo del Náutico Charigue">
+        </div>
+      </nav>
+      
+      <div class="whatsapp">
+        <a href="https://wa.me/543417690081" target="_blank">
+            <img src="whatsapp-icon.png" alt="WhatsApp" class="whatsapp-icon">
+        </a>
+    </div>
+      
+
+    <div class="separator"></div>
+
+<div class="container">
+    <h1 class="encabezados">Revista Náutica Mensual</h1>
+
+    <div class="revista-nautica">
+        <iframe src="NAUTICA 1-1_merged.pdf" width="100%" height="600px"></iframe>
+        <p><a href="NAUTICA 1-1_merged.pdf" target="_blank">Descargar la Revista Náutica - Mayo 2025 (PDF)</a></p>
+    </div>
+
+</div>
+<div class="separator"></div>
+<div class="sponsor">
+    <div class="sponsor-logos">
+        <a href="https://www.garciavidal.com/">
+        <img src="sponso nautico FGV.png" alt="Logo 1">
+        </a>
+    </div>
+</div>
+
+    <footer>
+        <p>Club Náutico Charigue - Rosario, Santa Fe, Argentina</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active'); // Muestra/oculta el menú principal en móviles
+        
+            // Opcional: Cambiar el ícono del menú hamburguesa
+            const menuToggle = document.querySelector('.menu-toggle');
+            if (menu.classList.contains('active')) {
+                menuToggle.innerHTML = '✕'; // Ícono de cerrar
+            } else {
+                menuToggle.innerHTML = '☰'; // Ícono de hamburguesa
+            }
+        }
+        
+        // Funcionalidad para el submenú en pantallas táctiles/móviles
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdowns = document.querySelectorAll('.navbar-paginas .dropdown');
+        
+            dropdowns.forEach(dropdown => {
+                const link = dropdown.querySelector('a'); // El enlace "Medios ▾"
+        
+                link.addEventListener('click', function(event) {
+                    // Solo prevenimos la navegación si estamos en modo móvil y hay un submenú
+                    if (window.innerWidth <= 768 && dropdown.querySelector('.dropdown-menu')) {
+                        event.preventDefault(); // Evita que el enlace navegue
+                        
+                        // Cierra otros submenús abiertos en el mismo nivel (si los hubiera)
+                        dropdowns.forEach(otherDropdown => {
+                            if (otherDropdown !== dropdown) {
+                                otherDropdown.classList.remove('open');
+                                // Asegurarse que el submenu está realmente oculto si no usamos la clase 'open' para display
+                                 if (otherDropdown.querySelector('.dropdown-menu')) {
+                                   otherDropdown.querySelector('.dropdown-menu').style.display = 'none';
+                                 }
+                            }
+                        });
+        
+                        dropdown.classList.toggle('open');
+                        const submenu = dropdown.querySelector('.dropdown-menu');
+                        if (submenu) {
+                            if (dropdown.classList.contains('open')) {
+                                submenu.style.display = 'flex'; // Usamos flex por flex-direction: column
+                            } else {
+                                submenu.style.display = 'none';
+                            }
+                        }
+                    }
+                    // Si no es móvil o no tiene submenú, el enlace funcionará normalmente
+                    // O si quieres que "Medios" sea clickeable incluso si tiene submenú en escritorio,
+                    // puedes quitar el href="#" y manejarlo aquí.
+                });
+            });
+        
+            // Cerrar submenús si se hace clic fuera (opcional pero recomendado)
+            document.addEventListener('click', function(event) {
+                if (window.innerWidth <= 768) {
+                    dropdowns.forEach(dropdown => {
+                        if (!dropdown.contains(event.target)) {
+                            dropdown.classList.remove('open');
+                            const submenu = dropdown.querySelector('.dropdown-menu');
+                            if (submenu) {
+                                submenu.style.display = 'none';
+                            }
+                        }
+                    });
+                }
+            });
+        });
+            </script>
+    
+</body>
+</html>

@@ -1,0 +1,831 @@
+
+
+/* Estilos Generales (los que ya tienes) */
+:root{
+    --color-fondo:#0f2573;
+    --color-secundario:#ade1fb;
+    --color-terciario:#266da9;
+    --color-secciones:#0f25737a;
+    --color-textos:#fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Montserrat", sans-serif; /* Movido para aplicar globalmente */
+    overflow-x: hidden; /* Evita scroll horizontal innecesario */
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Fondo general del body */
+    text-align: center; /* Puede que quieras ajustar esto según la sección */
+}
+
+.background-metereologia{
+    background-size: cover;
+    background-image: url('./metereologia-fondo.jpg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+}
+.background-autoridades{
+    background-size: cover;
+    background-image: '../fondo.2jpeg';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+}   
+.background-nautica{
+    background-size: cover;
+    background-image: url('./fondo7.jpeg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+}
+.background-programas{
+    background-size: cover;
+    background-image: url('./fondo6.jpeg');
+    position:  fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}   
+.background-contacto{
+    background-size: cover;
+    background-image: url('./fondo8.jpeg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+}
+.background-autoridades{
+    background-size: cover;
+    background-image: url('./fondo5.jpeg');
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+}
+.autoridades{
+    margin-top: 0em;
+}
+.autoridades dt,dd,p{
+    color: var(--color-textos);
+    margin-bottom: 1em;
+}
+
+.autoridades dt{
+    color: var(--color-secundario);
+}
+.contacto{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 800px;
+    margin: 0em auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.contacto .links { 
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto; /* Añadido para centrar y dar espacio */
+    max-width: 1200px; /* Ejemplo de ancho máximo */
+    text-align: center;
+}
+.contacto img{
+    align-items: center;
+    filter: invert(100%);
+ }
+
+
+.lista-autoridades{
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto; /* Añadido para centrar y dar espacio */
+    max-width: 800px; /* Ejemplo de ancho máximo */
+    text-align: center;
+}
+.separator-contacto h1 {
+    color: var(--color-fondo);
+    margin-bottom: 1em;
+}
+header { /* Estilo general para un posible header, si lo usas separado del nav */
+    background-color: #003366;
+    color: var(--color-secundario);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    margin: 0px 0;
+    color: var(--color-textos); /* Ajustado para que se vea en fondos oscuros */
+}
+.titulo{
+    margin-top: 1rem;
+    color: var(--color-textos);
+}
+
+h2 {
+    color: #003366;
+}
+
+h3 {
+    color: #fffcfc; /* Color por defecto, puede necesitar ajustes */
+    font-size: medium;
+}
+
+section, .links {
+    padding-bottom: 2rem;
+    background-color: var(--color-secundario);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto; /* Añadido para centrar y dar espacio */
+    max-width: 800px; /* Ejemplo de ancho máximo */
+}
+
+ul { /* Estilo base para listas, se sobreescribirá para el menú */
+    list-style-type: none;
+    padding: 10px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+a {
+    color: #003366;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: auto; /* Asegura que el footer esté al final si el contenido es corto */
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li{
+    display: inline;
+    margin: 0 10px;
+}
+
+footer h2 {
+    color: var(--color-secundario);
+}
+
+footer a {
+    color: var(--color-secundario);
+}
+
+footer p{
+    color: var(--color-secundario);
+}
+.links {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 4rem auto; /* Añadido para centrar y dar espacio */
+    width: 1200px; /* Ejemplo de ancho máximo */
+    text-align: center;
+    margin-bottom: 6rem;
+}
+.links h3 {
+    margin-top: 1em;
+    color: var(--color-secundario);
+    font-size: 1rem;
+}
+.links a {
+    color: var(--color-textos);
+    font-size: 1rem;
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.container p,h3 {
+    color: #fff; /* Color del texto */
+    font-size: 1rem; /* Tamaño de fuente */
+    line-height: 1.5; /* Espaciado entre líneas */
+    
+}
+
+/* === ESTILOS PARA NAVBAR-PAGINAS === */
+.navbar-paginas {
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    /* Ajustado para consistencia */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Para el posicionamiento del submenú y el menú móvil */
+    z-index: 1000; /* Para que esté por encima de otros contenidos */
+    margin-bottom: 2rem; /* Como lo tenías */
+}
+
+.navbar-paginas .logo img {
+    height: 3em; /* Ajusta según necesites */
+    width: auto;
+    margin-right: 2em;
+}
+
+.navbar-paginas ul#menu { /* Estilo para el UL principal del menú */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Por defecto para escritorio */
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre elementos del menú */
+}
+
+.navbar-paginas ul#menu li {
+    margin: 0; /* Quitamos el margen vertical que tenías en ul li general */
+    position: relative; /* Necesario para el submenú */
+    padding: 0.5rem 1rem ;
+}
+
+.navbar-paginas ul#menu li a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.8rem; /* Espaciado para mejor clickeo */
+    display: block; /* Para que el padding funcione bien */
+    font-size: 0.9rem; /* Ajustado ligeramente */
+}
+
+.navbar-paginas ul#menu li:hover,
+.navbar-paginas ul#menu li:focus {
+    background-color: var(--color-secundario);
+    transition: 0.3s;
+}
+
+/* Cambia el color del texto dentro del li cuando el hover se active */
+.navbar-paginas ul#menu li:hover a,
+.navbar-paginas ul#menu li:focus a {
+    color: var(--color-fondo);
+    text-decoration: none;
+}
+.navbar-paginas ul#menu.active li a {
+    color: var(--color-secundario);
+}
+
+.navbar-paginas-inicio {
+    background-color: var(--color-fondo);
+    color: var(--color-secundario);
+    padding: 1rem; /* Ajustado para consistencia */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative; /* Para el posicionamiento del submenú y el menú móvil */
+    z-index: 1000; /* Para que esté por encima de otros contenidos */
+}
+
+.navbar-paginas-inicio .logo img {
+    height: 50px; /* Ajusta según necesites */
+    width: auto;
+}
+
+.navbar-paginas-inicio ul#menu { /* Estilo para el UL principal del menú */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Por defecto para escritorio */
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre elementos del menú */
+}
+
+.navbar-paginas-inicio ul#menu li {
+    margin: 0; /* Quitamos el margen vertical que tenías en ul li general */
+    position: relative; /* Necesario para el submenú */
+}
+
+.navbar-paginas-inicio ul#menu li a {
+    color: var(--color-textos);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0.8rem; /* Espaciado para mejor clickeo */
+    display: block; /* Para que el padding funcione bien */
+    font-size: 0.9rem; /* Ajustado ligeramente */
+}
+
+.navbar-paginas-inicio ul#menu li a:hover,
+.navbar-paginas-inicio ul#menu li a:focus {
+    color: var(--color-fondo);
+    background-color: var(--color-secundario); /* Un ligero fondo al hacer hover/focus */
+    text-decoration: none; /* Quitamos el subrayado que tenías en a:hover general */
+}
+
+/* Estilos para el submenú .dropdown-menu */
+.dropdown {
+    position: relative; /* El contenedor del submenú */
+}
+
+.dropdown-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    top: 100%; /* Justo debajo del elemento padre "Medios" */
+    left: 0;
+    background-color: var(--color-fondo); /* Mismo color que la barra o uno ligeramente diferente */
+    min-width: 200px; /* Ancho mínimo del submenú */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1001; /* Por encima del nav principal */
+    padding: 0.5rem 0; /* Espaciado interno */
+    border-radius: 0 0 4px 4px; /* Bordes redondeados abajo */
+    flex-direction: column; /* Para que los items se apilen */
+}
+
+.dropdown-menu li {
+    width: 100%; /* Ocupa todo el ancho del submenú */
+    background-color: var(--color-fondo) !important;
+}
+
+.dropdown-menu li a {
+    padding: 0.6rem 1rem; /* Espaciado para los items del submenú */
+    font-size: 0.85rem; /* Ligeramente más pequeño */
+    color: var(--color-secundario) !important;
+    
+}
+
+.dropdown-menu li:hover,
+.dropdown-menu li:focus {
+    background-color: var(--color-secundario) !important; /* Color de hover para submenú */
+
+
+}
+
+.dropdown-menu li a:hover,
+.dropdown-menu li a:focus{
+    color: var(--color-fondo) !important;
+}
+
+/* Mostrar submenú al hacer hover sobre el .dropdown (para escritorio) */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu { /* `focus-within` para accesibilidad con teclado */
+    display: flex; /* Cambiado a flex para que funcione flex-direction: column */
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    background: none;
+    border: none;
+    color: var(--color-secundario);
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0rem;
+}
+
+
+
+.whatsapp-icon {
+    width: 60px; /* Ajusta el tamaño del icono */
+    height: 60px; /* Ajusta el tamaño del icono */
+    border-radius: 100%;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+
+    background-color: #25D366; /* Color de WhatsApp */
+    color: var(--color-secundario);
+    border-radius: 100%;
+    padding: 5px;
+    font-size: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.revista-nautica p, a{
+    margin-top: 1em;
+    color: var(--color-textos);
+}
+/* === ESTILOS RESPONSIVE === */
+@media (max-width: 768px) {
+    .navbar-paginas .logo {
+        /* Podrías querer ocultar el logo o moverlo si interfiere con el menú móvil */
+        /* display: none; */
+        position: absolute; /* Ejemplo: moverlo a la izquierda */
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .navbar-paginas-inicio .logo {
+        /* Podrías querer ocultar el logo o moverlo si interfiere con el menú móvil */
+        /* display: none; */
+        position: absolute; /* Ejemplo: moverlo a la izquierda */
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    .menu-toggle {
+        display: block; /* Mostrar en móvil */
+        order: 1; /* Para que aparezca a la derecha si el logo está a la izquierda */
+        margin-left: auto; /* Empuja el botón a la derecha si no hay otros elementos */
+    }
+
+    .navbar-paginas ul#menu {
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column; /* Apilar verticalmente */
+        width: 100%;
+        position: absolute; /* Para que se superponga al contenido */
+        top: 100%; /* Justo debajo de la barra de navegación */
+        left: 0;
+        background-color: var(--color-fondo); /* Fondo para el menú desplegado */
+        padding: 1rem 0; /* Espaciado interno */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .navbar-paginas ul#menu.active { /* Clase que se añade con JS para mostrar */
+        display: flex;
+    }
+
+    .navbar-paginas ul#menu li {
+        width: 100%;
+        text-align: center; /* Centrar texto de los ítems del menú */
+    }
+
+    .navbar-paginas ul#menu li a {
+        padding: 0.8rem 1rem; /* Más padding para facilitar el toque */
+        border-bottom: 1px solid var(--color-secundario); /* Separador opcional */
+    }
+    .navbar-paginas ul#menu li:last-child a {
+        border-bottom: none; /* Sin borde para el último elemento */
+    }
+    .navbar-paginas-inicio ul#menu {
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column; /* Apilar verticalmente */
+        width: 100%;
+        position: absolute; /* Para que se superponga al contenido */
+        top: 100%; /* Justo debajo de la barra de navegación */
+        left: 0;
+        background-color: var(--color-fondo); /* Fondo para el menú desplegado */
+        padding: 1rem 0; /* Espaciado interno */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .navbar-paginas-inicio ul#menu.active { /* Clase que se añade con JS para mostrar */
+        display: flex;
+    }
+
+    .navbar-paginas-inicio ul#menu li {
+        width: 100%;
+        text-align: center; /* Centrar texto de los ítems del menú */
+    }
+
+    .navbar-paginas-inicio ul#menu li a {
+        padding: 0.8rem 1rem; /* Más padding para facilitar el toque */
+        border-bottom: 1px solid var(--color-secundario); /* Separador opcional */
+    }
+    .navbar-paginas-inicio ul#menu li:last-child a {
+        border-bottom: none; /* Sin borde para el último elemento */
+    }
+    /* Ajustes para el submenú en móvil */
+    .dropdown-menu {
+        position: static; /* Quitar posicionamiento absoluto */
+        display: none; /* Inicialmente oculto */
+        width: 100%;
+        box-shadow: none;
+        padding-left: 1.5rem; /* Indentación para indicar subnivel */
+        background-color: transparent; /* O un color ligeramente diferente para distinguir */
+        border-radius: 0;
+    }
+
+    .dropdown.open .dropdown-menu { /* Clase 'open' para mostrar submenú en móvil */
+        display: flex; /* Mostrar al hacer clic en "Medios" */
+    }
+
+    .dropdown-menu li a {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+
+
+    /* Si el logo está visible y centrado en el nav, podrías necesitar ajustar el botón de menú */
+    .navbar-paginas {
+        /* Si tienes un logo en medio, necesitarás más ajustes */
+        /* justify-content: flex-end; */ /* Para que el botón se vaya a la derecha */
+    }
+
+    .navbar-paginas .logo {
+        /* Ajustar si es necesario para la vista móvil, por ejemplo, hacerlo más pequeño o quitarlo */
+        /* display: none; */ /* Si quieres ocultarlo en móvil */
+    }
+    .links{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .contacto {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+/* Otros estilos que tenías (video, carousel, etc.) */
+.video-inicio {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.video-inicio iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+.video-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    z-index: 2;
+    justify-content: center;
+    
+    
+    
+}
+.video-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--color-fondo);
+}
+.video-item iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+.video-title {
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+}
+.body-inicio {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+.video-background {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -2em;
+    margin-bottom: -9rem;
+}
+.video-background iframe {
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    display: block;
+}
+.navbar { /* Asumo que esta es otra barra de navegación, diferente a navbar-paginas */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; /* Menor que navbar-paginas si se superponen */
+    background-color: rgba(175, 173, 70, 0);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.navbar a {
+    color: rgba(255, 255, 255, 0.925);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.navbar a:hover {
+    color: var(--color-secundario);
+}
+
+/* Estilos de navbar-inicio (si es diferente de navbar-paginas) */
+.navbar-inicio {
+    /* ... tus estilos para navbar-inicio ... */
+    /* Similar a .navbar o .navbar-paginas pero específico para la página de inicio */
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    background-color: var(--color-fondo);
+}
+.navbar-inicio:hover {
+    background-color: var(--color-fondo);
+}
+.navbar-inicio ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.navbar-inicio a {
+    color: rgba(255, 255, 255, 0.925);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.navbar-inicio a:hover {
+    color: var(--color-secundario);
+}
+
+
+.encabezados {
+    color: var(--color-secundario);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.content {
+    position: relative;
+    z-index: 1;
+    color: var(--color-secundario); /* Puede necesitar ajuste según el fondo */
+    text-align: center;
+    /* top: 50%; */ /* Comentado por la directiva responsive */
+    /* transform: translateY(-50%); */ /* Comentado por la directiva responsive */
+    padding: 0 2rem;
+}
+#video-celular {
+    display: none;
+}
+.sponsor {
+    padding: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin-top: 9rem;
+}
+.sponsor img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 768px) {
+    #video-escritorio {
+        display: none;
+    }
+    #video-celular {
+        display: block;
+        margin-top: -2em;
+    }
+
+.contacto {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;}
+
+    /* Ya cubierto arriba para .navbar-paginas ul */
+    /* .navbar ul, */
+    /* .navbar-paginas ul { ... } */
+
+    .navbar ul.active,
+    .navbar-paginas ul#menu.active { /* Asegurando que #menu también se maneje */
+        display: flex;
+    }
+
+    .navbar .logo,
+    .navbar-paginas .logo {
+        /* display: none; */ /* Lo manejamos arriba con más detalle */
+    }
+    .navbar .logo img,
+    .navbar-paginas .logo img {
+        height: 50px; /* Ya definido */
+    }
+
+    /* .dropdown-menu { */
+        /* display: none !important; */ /* Esto es demasiado restrictivo, lo manejamos con .open */
+    /* } */
+
+.container {
+        flex: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 2em;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .video-grid {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+ .video-item {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .content {
+        top: auto;
+        transform: none;
+        padding: 3rem 1rem 2rem;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .content h1 {
+        font-size: 1.6rem;
+    }
+    .content h3 {
+        font-size: 1rem;
+    }
+    section, .links, .contacto{
+        padding: 15px; /* Reducir el padding en móvil */
+        max-width: 80%;
+    }
+    .autoridades {
+        padding: 15px;
+        border-radius: 8px;
+    }
+    .contacto{
+        top: auto;
+        transform: none;
+        padding: 4rem 1rem 2rem;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .separator-contacto h1 {
+        font-size: 1.8rem; /* Ajustar tamaño del título */
+        margin-bottom: 0.8em;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    a {
+        font-size: 1rem; /* Hacer los enlaces más grandes para tocar */
+    }
+    .navbar-paginas ul#menu li a {
+        padding: 1rem; /* Más espacio para tocar en el menú */
+        font-size: 1rem;
+    }
+    .dropdown-menu li a {
+        font-size: 0.9rem;
+        padding: 0.7rem 1rem;
+    }
+}
+
+.navbar-paginas ul#menu.active li a:hover {
+    background-color: var(--color-terciario);
+    color: var(--color-fondo);
+}
